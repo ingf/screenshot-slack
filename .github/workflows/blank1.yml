@@ -30,12 +30,9 @@ jobs:
     
       - name: Run a multi-line script
         run: |
-          echo ${{env.RUNNER_TEMP}}
           ls -l /tmp/
           echo ========
-          ls -l ${{env.RUNNER_TEMP}}
-          echo pwd
-          ls -l
+          find . -name i screenshot.png
           echo Add other actions to build,
           echo test, and deploy your project.
           
