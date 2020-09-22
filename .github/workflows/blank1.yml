@@ -34,8 +34,6 @@ jobs:
           echo ========
           find . -name 'screenshot.png'
           echo ========
-          echo ${{process.env.RUNNER_TEMP}}
-          echo ========
           echo Add other actions to build,
           echo test, and deploy your project.
           
@@ -43,7 +41,7 @@ jobs:
         uses: adrey/slack-file-upload-action@master
         with:
           token: ${{ secrets.SLACK_TOKEN }}
-          path: ${{process.env.RUNNER_TEMP}}/screenshot.png
+          path: /github/workspace/screenshot.png
           channel: general
 
 
