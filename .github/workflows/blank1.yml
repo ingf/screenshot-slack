@@ -34,6 +34,8 @@ jobs:
           ls -l /tmp/
           echo ========
           ls -l ${{env.RUNNER_TEMP}}
+          echo ${{pwd}}
+          ls -l
           echo Add other actions to build,
           echo test, and deploy your project.
           
