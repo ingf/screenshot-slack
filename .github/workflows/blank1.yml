@@ -27,14 +27,13 @@ jobs:
         with:
           source: https://mgtv.com/
           destination: screenshot.png
-    
+      - uses: actions/upload-artifact@v2
+        with:
+          name: artifact
+          path: /data/screenshot.png
+
       - name: Run a multi-line script
         run: |
-          ls -l /github/workspace/
-          echo ========
-          ls -l /home/runner/
-          echo ========
-          ls -l /home/runner/work/_temp
           echo ========
           echo Add other actions to build,
           echo test, and deploy your project.
@@ -43,7 +42,7 @@ jobs:
         uses: adrey/slack-file-upload-action@master
         with:
           token: ${{ secrets.SLACK_TOKEN }}
-          path: /github/workspace/screenshot.png
+          path: /data/screenshot.png
           channel: general
 
 
