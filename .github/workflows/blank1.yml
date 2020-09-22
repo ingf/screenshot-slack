@@ -32,7 +32,7 @@ jobs:
         run: |
           ls -l /github/workspace/
           echo ========
-          find . -name 'screenshot.png'
+          ls -l /home/runner/work/_temp
           echo ========
           echo Add other actions to build,
           echo test, and deploy your project.
