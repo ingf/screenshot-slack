@@ -27,9 +27,10 @@ jobs:
         with:
           source: https://mgtv.com/
           destination: screenshot.png
+
       - uses: actions/upload-artifact@v2
         with:
-          name: artifact
+          name: screenshot
           path: /data/screenshot.png
 
       - name: Run a multi-line script
