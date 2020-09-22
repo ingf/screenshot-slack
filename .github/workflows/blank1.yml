@@ -18,9 +18,13 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: Run a multi-line script
+        run: |
+          echo ${{env.RUNNER_TEMP}}
+          ls -l /
+          ls -s ${{env.RUNNER_TEMP}}
+          echo Add other actions to build,
+          echo test, and deploy your project.
       
       - name: Screenshot Website
         uses: swinton/screenshot-website@v1.x
