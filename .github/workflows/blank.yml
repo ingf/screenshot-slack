@@ -12,8 +12,8 @@ jobs:
   test-and-upload-results:
     runs-on: ubuntu-latest
     steps:
-      - name: 'Upload screenshots and videos to Slack'
-        uses: trymbill/cypress-slack-video-upload-action@v1.0.0
+      - name: Screenshot Website
+        uses: swinton/screenshot-website@v1.x
         with:
-          token: 'd11943e967efb7764b047255befac6f0
-          channels: 'general'
+          source: https://github.com/swinton/screenshot-website
+          destination: screenshot.png
