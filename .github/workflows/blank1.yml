@@ -26,7 +26,6 @@ jobs:
         uses: swinton/screenshot-website@v1.x
         with:
           source: https://mgtv.com/
-          path: /data/
     
       - name: Upload to slack step
         uses: adrey/slack-file-upload-action@master
