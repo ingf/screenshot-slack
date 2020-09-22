@@ -32,7 +32,7 @@ jobs:
         run: |
           ls -l /tmp/
           echo ========
-          find . -name i "screenshot.png"
+          find . -name 'screenshot.png'
           echo Add other actions to build,
           echo test, and deploy your project.
           
