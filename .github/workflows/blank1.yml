@@ -32,6 +32,8 @@ jobs:
         run: |
           ls -l /github/workspace/
           echo ========
+          ls -l /home/runner/
+          echo ========
           ls -l /home/runner/work/_temp
           echo ========
           echo Add other actions to build,
