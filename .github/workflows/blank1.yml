@@ -27,6 +27,7 @@ jobs:
         with:
           source: https://mgtv.com/
           destination: screenshot.png
+          debug: true
     
       - name: Run a multi-line script
         run: |
