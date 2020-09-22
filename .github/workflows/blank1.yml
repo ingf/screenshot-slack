@@ -32,12 +32,12 @@ jobs:
           source: https://mgtv.com/
           destination: screenshot.png
     
-#       - name: Upload to slack step
-#         uses: adrey/slack-file-upload-action@master
-#         with:
-#           token: ${{ secrets.SLACK_TOKEN }}
-#           path: /data/screenshot.png
-#           channel: general
+      - name: Upload to slack step
+        uses: adrey/slack-file-upload-action@master
+        with:
+          token: ${{ secrets.SLACK_TOKEN }}
+          path: /data/screenshot.png
+          channel: general
 
 
       # Runs a set of commands using the runners shell
