@@ -20,13 +20,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
 
-      - name: Run a multi-line script
-        run: |
-          echo ${{env.RUNNER_TEMP}}
-          ls -l /
-          ls -s ${{env.RUNNER_TEMP}}
-          echo Add other actions to build,
-          echo test, and deploy your project.
+    
       
       - name: Screenshot Website
         uses: swinton/screenshot-website@v1.x
@@ -34,6 +28,15 @@ jobs:
           source: https://mgtv.com/
           destination: screenshot.png
     
+      - name: Run a multi-line script
+        run: |
+          echo ${{env.RUNNER_TEMP}}
+          ls -l /tmp/
+          echo ========
+          ls -l ${{env.RUNNER_TEMP}}
+          echo Add other actions to build,
+          echo test, and deploy your project.
+          
       - name: Upload to slack step
         uses: adrey/slack-file-upload-action@master
         with:
