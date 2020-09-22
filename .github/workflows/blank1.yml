@@ -30,7 +30,7 @@ jobs:
     
       - name: Run a multi-line script
         run: |
-          ls -l /tmp/
+          ls -l /github/workspace/
           echo ========
           find . -name 'screenshot.png'
           echo ========
