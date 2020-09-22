@@ -26,13 +26,13 @@ jobs:
         uses: swinton/screenshot-website@v1.x
         with:
           source: https://mgtv.com/
-          destination: screenshot.png
+          path: /data/
     
       - name: Upload to slack step
         uses: adrey/slack-file-upload-action@master
         with:
           token: ${{ secrets.SLACK_TOKEN }}
-          path: screenshot.png
+          path: /data/screenshot.png
           channel: general
 
 
