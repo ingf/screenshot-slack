@@ -41,7 +41,7 @@ jobs:
         uses: adrey/slack-file-upload-action@master
         with:
           token: ${{ secrets.SLACK_TOKEN }}
-          path: /data/screenshot.png
+          path: ${{env.RUNNER_TEMP}}/screenshot.png
           channel: general
 
 
