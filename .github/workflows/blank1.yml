@@ -28,7 +28,7 @@ jobs:
           width: 2560
           height: 1440
           element: '.chart-markup-table'
-          scripts: 'var big = document.querySelector(".control-bar__btn--zoom-in");big.click();big.click();big.click()'
+         
 
       - uses: actions/download-artifact@v2
         with:
