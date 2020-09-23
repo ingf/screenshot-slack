@@ -25,21 +25,15 @@ jobs:
       - name: Screenshot Website
         uses: swinton/screenshot-website@v1.x
         with:
-          source: https://mgtv.com/
+          source: https://cn.tradingview.com/script/Z80gO0Ny/
           destination: screenshot.png
+          full-page: true
+          width: 2560
+          height: 1440
 
       - uses: actions/download-artifact@v2
         with:
           name: screenshot
-
-      - name: Display structure of downloaded files
-        run: ls -R
-
-      - name: Run a multi-line script
-        run: |
-          echo ========
-          echo Add other actions to build,
-          echo test, and deploy your project.
           
       - name: Upload to slack step
         uses: adrey/slack-file-upload-action@master
