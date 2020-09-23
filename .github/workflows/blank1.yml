@@ -25,10 +25,10 @@ jobs:
           source: https://cn.tradingview.com/script/Z80gO0Ny/
           destination: screenshot.png
           scale-factor: 3
-          click-element: '.control-bar__btn--zoom-in'
           width: 2560
           height: 1440
           element: '.chart-markup-table'
+          modules: 'var big = document.querySelector(".control-bar__btn--zoom-in");big.click();big.click();big.click()'
 
       - uses: actions/download-artifact@v2
         with:
