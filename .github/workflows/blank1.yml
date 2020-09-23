@@ -24,7 +24,6 @@ jobs:
         with:
           source: https://cn.tradingview.com/script/Z80gO0Ny/
           destination: screenshot.png
-          full-page: true
 
       - uses: actions/download-artifact@v2
         with:
