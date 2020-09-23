@@ -28,6 +28,7 @@ jobs:
           width: 2560
           height: 1440
           element: '.chart-markup-table'
+          click-element: '.control-bar__btn--zoom-in'
 
       - uses: actions/download-artifact@v2
         with:
