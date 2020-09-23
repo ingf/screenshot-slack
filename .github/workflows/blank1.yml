@@ -26,6 +26,7 @@ jobs:
           destination: screenshot.png
           width: 2560
           height: 1440
+          element: '.chart-markup-table'
 
       - uses: actions/download-artifact@v2
         with:
