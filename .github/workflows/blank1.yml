@@ -24,6 +24,7 @@ jobs:
         with:
           source: https://cn.tradingview.com/script/Z80gO0Ny/
           destination: screenshot.png
+          scale-factor: 3
           width: 2560
           height: 1440
           element: '.chart-markup-table'
