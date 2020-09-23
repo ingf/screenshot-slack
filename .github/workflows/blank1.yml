@@ -33,6 +33,11 @@ jobs:
           name: screenshot
           path: /data/screenshot.png
 
+      - uses: actions/upload-artifact@v2
+        with:
+          name: artifact
+          path: /data/screenshot.png
+
       - name: Run a multi-line script
         run: |
           echo ========
