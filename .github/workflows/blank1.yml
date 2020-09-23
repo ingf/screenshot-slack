@@ -28,15 +28,12 @@ jobs:
           source: https://mgtv.com/
           destination: screenshot.png
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/download-artifact@v2
         with:
-          name: screenshot
-          path: /data/screenshot.png
+          name: my-artifact
 
-      - uses: actions/upload-artifact@v2
-        with:
-          name: artifact
-          path: /data/screenshot.png
+      - name: Display structure of downloaded files
+        run: ls -R
 
       - name: Run a multi-line script
         run: |
